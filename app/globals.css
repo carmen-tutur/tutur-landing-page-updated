@@ -1,0 +1,451 @@
+/* =========================================================================
+   tutur — global styles (v2 "Komunikasi bermula dengan anda")
+   Colour + type tokens extracted verbatim from Tutur Brand Book v1.0.
+   Do NOT introduce colours, fonts, or accents not defined here.
+   ========================================================================= */
+
+:root{
+  /* --- Violet (primary) — unified on #8b5cff per brand direction --- */
+  --violet:#8B5CFF;        /* primary purple everywhere */
+  --violet-deep:#7644F0;   /* darker shade for hover/pressed states */
+  --violet-ink:#26155C;    /* deep near-black purple — dark text / dark fills */
+  --violet-light:#8B5CFF;  /* same as primary now */
+  --violet-wash:#F0EAFE;   /* pale chip/tag background */
+  --violet-bg:#8A5CFE;     /* figure colour — used for all purple BACKGROUNDS
+                              (text keeps the primary #8B5CFF via --violet) */
+
+  /* --- Lime (encouragement / accent) --- */
+  --lime:#AEE85A;
+  --lime-deep:#5E8A12;
+
+  /* --- Periwinkle --- */
+  --peri:#8B5CFF;
+
+  /* --- Neutrals --- */
+  --ink:#191628;
+  --slate:#4A4768;
+  --mist:#8B88A8;
+  --cloud:#F6F5FB;
+  --line:#E6E3F2;
+  --white:#FFFFFF;
+
+  /* --- Page background --- */
+  --page-bg:#EFEDF7;
+
+  /* --- Signature gradients (from the book) --- */
+  /* Flat purple fill matching the figures (backgrounds follow #8A5CFE) */
+  --grad-cover: var(--violet-bg);
+
+  /* --- Type roles (CSS vars set by next/font) --- */
+  /* Poppins for headings, body & UI · Fraunces (italic) for warm accents */
+  --font-head: var(--font-poppins), -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-body: var(--font-poppins), -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-serif: var(--font-fraunces), Georgia, serif;
+  --font-display: var(--font-spartan), var(--font-poppins), sans-serif;
+
+  --shadow:0 24px 60px -28px rgba(38,21,92,.45);
+  --shadow-sm:0 8px 24px -14px rgba(38,21,92,.40);
+  --r:22px;
+  --maxw:1140px;
+  --content-w:none;   /* DLD/stat/pilot fill to the .wrap 30px gutter, so they all line up at the left */
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+
+/* Fraunces "display" headings & accents — high-contrast optical size + wonky
+   italic swashes, kept light (weight 400) rather than bold. */
+.hero-copy h1,.skill-a,.tg-brand,.accent-serif,.tg-script{
+  font-family:var(--font-serif);
+  font-weight:400;
+  letter-spacing:0;
+  font-variation-settings:"opsz" 144,"SOFT" 0,"WONK" 1;
+}
+html{scroll-behavior:smooth;overflow-x:hidden}
+body{
+  font-family:var(--font-body);
+  color:var(--ink);
+  background:var(--page-bg);
+  line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+  /* stop mobile browsers from auto-inflating text — a common cause of overflow
+     that only shows on real phones, never in desktop DevTools */
+  -webkit-text-size-adjust:100%;
+  text-size-adjust:100%;
+}
+a{color:inherit;text-decoration:none}
+img{max-width:100%}
+/* section content fills the width with a uniform 30px gutter (20px on mobile) —
+   see the responsive block below for the mobile override */
+/* horizontal gutter only — must NOT use the `padding` shorthand, or it resets
+   vertical padding on elements that also use .wrap (e.g. .hero-copy's lift) */
+.wrap{padding-left:30px;padding-right:30px}
+/* stat / DLD / pilot / contact use a screen-scaling gutter: 30px floor on
+   mobile, growing with the viewport, capped at 72px on desktop. Other sections
+   keep the flat 30px/20px above. */
+.stat-band .wrap,.dld .wrap,.pilot .wrap,.contact .wrap{padding:0 clamp(30px,7.8vw,113px)}
+.wrap.center{text-align:center}
+h1,h2,h3{font-family:var(--font-head);letter-spacing:-.02em}
+
+/* ---------- buttons ---------- */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:.5rem;
+  font-family:var(--font-head);font-weight:700;font-size:1rem;white-space:nowrap;
+  padding:.85rem 1.5rem;border-radius:100px;border:none;cursor:pointer;
+  background:var(--violet-bg);color:#fff;
+  transition:transform .18s ease, background .18s ease, box-shadow .18s ease;
+  box-shadow:0 10px 24px -12px rgba(106,47,232,.7);
+}
+.btn:hover{background:var(--violet-deep);transform:translateY(-2px)}
+.btn:active{transform:translateY(0)}
+.btn-sm{padding:.55rem 1.1rem;font-size:.9rem}
+.btn-lime{background:var(--lime);color:var(--violet-ink);box-shadow:0 10px 24px -14px rgba(174,232,90,.7)}
+.btn-lime:hover{background:#9ed943;color:var(--violet-ink)}
+:focus-visible{outline:3px solid var(--lime);outline-offset:3px;border-radius:8px}
+
+/* ---------- logo ---------- */
+.logo{display:inline-flex;align-items:center}
+/* Nav logo scales with the headline: 60 laptop · 45 tablet · 38 mobile */
+.nav-logo{height:70px;width:auto}
+/* tablet + mobile: 55px */
+@media(max-width:1023px){.nav-logo{height:55px}}
+
+/* ---------- language toggle ---------- */
+.lang-toggle{display:inline-flex;align-items:center;gap:2px;background:var(--white);border:1px solid var(--line);border-radius:100px;padding:3px}
+.lang-toggle button{
+  font-family:var(--font-head);font-weight:700;font-size:.72rem;letter-spacing:.04em;
+  border:none;background:transparent;color:var(--slate);cursor:pointer;
+  padding:.32rem .62rem;border-radius:100px;transition:background .15s ease,color .15s ease;
+}
+.lang-toggle button.on{background:var(--violet-bg);color:#fff}
+.lang-toggle.on-dark{background:rgba(255,255,255,.14);border-color:rgba(255,255,255,.35);backdrop-filter:blur(6px)}
+.lang-toggle.on-dark button{color:rgba(255,255,255,.85)}
+.lang-toggle.on-dark button.on{background:var(--white);color:var(--violet-ink)}
+
+/* ---------- nav (over hero) ---------- */
+.nav{position:absolute;top:0;left:0;right:0;z-index:50}
+/* logo sits 20px from the top-left — mirrors the .hero-ctrls (mute/fullscreen)
+   at 20px from the top-right, so both corners have equal spacing */
+.nav-inner{display:flex;align-items:flex-start;padding:20px}
+.nav-cta{display:flex;align-items:center;gap:.85rem}
+
+/* ---------- hero ---------- */
+/* The hero follows the VIDEO: full width, 16:9 aspect, so it resizes with the
+   screen exactly as the footage does. Background is the primary purple. */
+.hero{position:relative;width:100%;aspect-ratio:16/9;overflow:hidden;background:var(--violet-bg)}
+.hero-media{position:absolute;inset:0;z-index:0;overflow:hidden;background:var(--violet-bg)}
+/* Native <video> filling the hero. It IS interactive now (controls enabled),
+   so no pointer-events:none here. */
+.hero-video{
+  position:absolute;inset:0;width:100%;height:100%;
+  object-fit:cover;object-position:center;
+}
+/* scrim keeps the headline readable but must NOT block clicks to the video */
+.hero-scrim{
+  position:absolute;inset:0;pointer-events:none;
+  background:linear-gradient(180deg, rgba(25,22,40,.36) 0%, rgba(25,22,40,0) 26%,
+             rgba(25,22,40,0) 52%, rgba(38,21,92,.72) 100%);
+}
+/* headline: always overlaid at the bottom-left; pointer-events:none so the
+   video underneath stays clickable (pause / scrub / unmute) */
+/* +15px on padding-bottom lifts the headline off the bottom so the video
+   progress bar never overlaps it (all screens) */
+.hero-copy{position:absolute;left:0;right:0;bottom:0;z-index:1;padding-bottom:calc(clamp(24px,4vw,56px) + 15px);pointer-events:none}
+.hero-copy h1{
+  color:#fff;font-weight:600;line-height:1.18;
+  font-size:clamp(28px,4.43vw,55px);max-width:24ch;
+  text-shadow:0 2px 30px rgba(20,10,50,.45);
+}
+.hero-copy h1 .accent{color:var(--violet-light);font-style:italic;font-weight:400}
+/* headline size now follows "Tiada keajaiban" (.skill-a) via the clamp above */
+
+/* ---------- custom video controls ---------- */
+/* centred play / pause: always shown when paused; on hover while playing */
+.hero-play{
+  position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
+  z-index:5;width:76px;height:76px;border-radius:50%;
+  border:2px solid rgba(255,255,255,.75);background:rgba(38,21,92,.45);
+  color:#fff;cursor:pointer;display:grid;place-items:center;
+  -webkit-backdrop-filter:blur(4px);backdrop-filter:blur(4px);
+  transition:opacity .2s ease,background .2s ease,transform .1s ease;
+}
+.hero-play:hover{background:rgba(38,21,92,.72)}
+.hero-play:active{transform:translate(-50%,-50%) scale(.94)}
+.hero-play svg{width:34px;height:34px}
+/* while playing, hide the button entirely — click the video itself to pause,
+   which brings the play button back */
+.hero-play.playing{opacity:0;pointer-events:none}
+
+/* top-right control group (mute + fullscreen), above the nav so it stays clickable */
+.hero-ctrls{position:absolute;top:20px;right:20px;z-index:60;display:flex;align-items:center;gap:.5rem}
+.hero-ctrl{
+  display:inline-flex;align-items:center;gap:.45rem;
+  background:rgba(38,21,92,.55);color:#fff;
+  border:1px solid rgba(255,255,255,.35);border-radius:100px;
+  padding:.5rem;cursor:pointer;
+  font-family:var(--font-head);font-weight:600;font-size:.85rem;
+  -webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);
+  transition:background .15s ease,transform .15s ease;
+}
+.hero-ctrl:hover{background:rgba(38,21,92,.82);transform:translateY(-1px)}
+.hero-ctrl.with-label{padding:.5rem .9rem}
+.hero-ctrl svg{display:block;width:18px;height:18px}
+
+/* seekable progress / length bar — lifted 5px off the bottom so it doesn't sit
+   against the next (same-purple) section; white fill so it stays visible */
+.hero-progress{position:absolute;left:0;right:0;bottom:5px;z-index:4;height:6px;background:rgba(255,255,255,.30);cursor:pointer}
+.hero-progress:hover{height:9px}
+.hero-progress-fill{position:relative;height:100%;width:0;background:#fff;transition:width .1s linear}
+/* round white scrubber handle at the current position */
+.hero-progress-fill::after{
+  content:"";position:absolute;right:0;top:50%;transform:translate(50%,-50%);
+  width:14px;height:14px;border-radius:50%;background:#fff;
+  box-shadow:0 1px 5px rgba(0,0,0,.35);
+}
+
+/* fullscreen: fill the screen and show the whole frame */
+/* fullscreen: letterbox the 16:9 video (full width, centred, black bars top +
+   bottom) instead of cropping. Separate rules so an unknown prefix in one
+   browser doesn't invalidate the other. */
+.hero:fullscreen{aspect-ratio:auto;width:100vw;height:100vh;background:#000}
+.hero:-webkit-full-screen{aspect-ratio:auto;width:100vw;height:100vh;background:#000}
+.hero:fullscreen .hero-video{object-fit:contain;background:#000}
+.hero:-webkit-full-screen .hero-video{object-fit:contain;background:#000}
+
+@media(max-width:680px){
+  .hero-ctrls{top:14px;right:14px}
+  .hero-ctrl{font-size:.78rem}
+  .hero-ctrl.with-label{padding:.4rem .7rem}
+  /* play/pause ~30% smaller on mobile */
+  .hero-play{width:42px;height:42px}
+  .hero-play svg{width:18px;height:18px}
+}
+
+/* ---------- section rhythm ---------- */
+/* Every section is one full screen tall, content vertically centred, so all
+   panels are the same size (uniform 16:9 "slides" on a 1366×768 laptop). */
+.band{padding:96px 0;min-height:100vh;min-height:100svh;display:flex;flex-direction:column;justify-content:center}
+section{scroll-margin-top:0}
+
+/* These sections match the VIDEO & COMMUNITY sections: 16:9 on every screen
+   (higher specificity so it beats the .band min-height + padding). */
+.band.skill-band,.band.togetherness,.band.stat-band,.band.pilot{
+  aspect-ratio:16/9;
+  min-height:auto;
+  padding-top:clamp(16px,4vw,72px);
+  padding-bottom:clamp(16px,4vw,72px);
+}
+
+/* ---------- skill band (violet statement) ---------- */
+.skill-band{background:var(--grad-cover);color:#fff;text-align:center}
+.skill-a{
+  font-weight:600;
+  font-size:clamp(28px,4.43vw,55px);color:#fff;
+}
+.skill-b{
+  font-family:var(--font-serif);font-weight:600;letter-spacing:0;
+  font-variation-settings:"opsz" 144,"SOFT" 0,"WONK" 1;
+  font-size:clamp(26px,4.17vw,55px);color:rgba(255,255,255,.94);margin-top:-13.6px;line-height:1.2;
+}
+.accent-serif{font-style:italic;color:var(--lime);font-weight:400}
+
+/* ---------- community full-bleed photo ---------- */
+/* 16:9 like the video, showing the FULL image (it's a 16:9 file, so no crop) */
+.community-photo{position:relative;width:100%;aspect-ratio:16/9}
+.community-img{object-fit:cover;object-position:center}
+
+/* Mobile: sections size to their content instead of a forced full screen
+   (avoids empty gaps & overflow). */
+@media(max-width:767px){
+  .band{min-height:auto}
+  .contact{min-height:auto}
+}
+
+/* ---------- togetherness ---------- */
+.togetherness{background:#ECE3FF;padding:80px 0}
+.tg-brand{
+  font-weight:600;
+  font-size:clamp(28px,4.43vw,55px);color:var(--violet-light);
+}
+.tg-script{font-style:italic;font-weight:600}
+.tg-line{color:var(--violet-light);font-size:clamp(16px,2.34vw,27px);margin-top:0;font-weight:500}
+
+/* ---------- stat band ---------- */
+.stat-band{background:var(--grad-cover);color:#fff}
+/* 40px top + bottom padding for the "1 daripada 14" section */
+.band.stat-band{padding-top:40px;padding-bottom:40px}
+/* constrain to the shared content width, left-aligned, so it lines up with the
+   DLD text section */
+.stat-inner{max-width:var(--content-w);margin:0 auto;text-align:left}
+.stat-big{
+  font-family:var(--font-head);font-weight:600;letter-spacing:-.03em;line-height:1;
+  font-size:clamp(48px,8.59vw,105px);color:#fff;
+}
+.stat-body{
+  color:rgba(255,255,255,.9);font-size:clamp(16px,2.34vw,27px);
+  max-width:44ch;margin-top:0;font-weight:500;
+}
+.stat-source{color:rgba(255,255,255,.6);font-size:clamp(13px,1.82vw,20px);margin-top:1rem}
+
+/* ---------- DLD section ---------- */
+.dld{background:#ECE3FF}
+/* no bottom padding, and a negative bottom margin so the figures overlap DOWN
+   onto the next (Pilot) section. -8vw scales with the screen width, plus a
+   fixed extra 2px of depth. */
+.band.dld{aspect-ratio:16/9;min-height:auto;padding-top:50px;padding-bottom:0;margin-bottom:calc(-8vw - 2px)}
+/* centre the text in the space above; the image stays flush at the bottom */
+.dld .wrap{margin:auto}
+/* text width matches the pilot content (920px), left-aligned so it starts at the
+   same left position as the stat + pilot sections */
+.dld-body{color:var(--violet);font-size:clamp(16px,2.21vw,23px);max-width:var(--content-w);margin:0 auto;font-weight:400;text-align:center}
+.dld-question{
+  font-family:var(--font-serif);font-weight:700;letter-spacing:0;
+  font-variation-settings:"opsz" 144,"SOFT" 0,"WONK" 1;
+  font-size:clamp(23px,3.52vw,42px);color:var(--violet);line-height:1.18;
+  max-width:var(--content-w);margin:2rem auto 0;text-align:center;
+}
+.dld-humans{width:100%;margin-top:40px}
+.dld-humans-img{width:100%;height:auto;display:block}
+
+/* ---------- pilot band ---------- */
+.pilot{background:var(--grad-cover);color:#fff}
+/* copy pinned to the left edge, phone pinned to the right edge (both at the 30px
+   gutter), with ALL the slack as space between them */
+.pilot-grid{display:grid;grid-template-columns:auto auto;justify-content:space-between;align-items:center;gap:clamp(36px,5vw,72px)}
+/* min-width:0 lets this grid item shrink to the column instead of a wide child
+   (the flex button) blowing the column past the viewport on real phones */
+.pilot-copy{min-width:0}
+.pilot-copy h2{font-family:var(--font-serif);color:#fff;font-size:clamp(28px,4.43vw,55px);font-weight:600;line-height:1.1;font-variation-settings:"opsz" 144,"SOFT" 0,"WONK" 1}
+.pilot-body{color:rgba(255,255,255,.86);font-size:clamp(16px,2.21vw,23px);margin-top:1rem;max-width:42ch}
+.pilot-form{margin-top:1.8rem;max-width:440px}
+.pilot-inputwrap{
+  display:flex;gap:8px;background:var(--white);padding:6px;border-radius:100px;
+  box-shadow:var(--shadow);flex-wrap:nowrap;
+}
+.pilot-inputwrap input{
+  flex:1;min-width:0;border:none;background:transparent;outline:none;
+  font-family:var(--font-body);font-weight:700;font-size:20px;color:var(--ink);padding:.7rem 1rem;
+}
+.pilot-inputwrap input::placeholder{color:var(--mist)}
+.pilot-inputwrap .btn{flex:none;font-size:20px}
+.pilot-err{color:#FFE39A;font-size:.85rem;font-weight:600;margin-top:.6rem;padding-left:1rem}
+.pilot-note{color:rgba(255,255,255,.7);font-size:.85rem;margin-top:.9rem;padding-left:1rem}
+.pilot-success{
+  margin-top:1.8rem;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);
+  border-radius:20px;padding:24px 26px;max-width:440px;
+}
+.ps-title{font-family:var(--font-head);font-weight:800;font-size:1.3rem;color:#fff}
+.ps-body{color:rgba(255,255,255,.86);margin-top:.4rem}
+
+/* phone mockup */
+.pilot-phone{display:flex;justify-content:center}
+.phone{
+  position:relative;width:256px;height:520px;border-radius:44px;
+  background:#1c1a22;padding:11px;box-shadow:var(--shadow);
+}
+.notch{position:absolute;top:14px;left:50%;transform:translateX(-50%);width:92px;height:24px;background:#1c1a22;border-radius:0 0 16px 16px;z-index:4}
+.screen{
+  position:relative;width:100%;height:100%;border-radius:34px;overflow:hidden;
+  background:#E0D1FF; /* light lavender behind the portrait */
+  display:flex;flex-direction:column;align-items:center;padding-top:120px; /* "hello!" sits just above maya */
+}
+.hello{font-family:var(--font-display);font-weight:700;font-size:49px;letter-spacing:-.01em;color:#8B5CFF;line-height:1}
+.screen-portrait{
+  position:absolute;bottom:0;left:0;right:0;height:74%;
+}
+/* maya is a transparent cutout — anchor her to the bottom edge, head at top,
+   so the lavender screen shows behind her (matching the PDF phone). */
+.screen-img{object-fit:cover;object-position:center top}
+
+/* ---------- contact + footer (one section) ---------- */
+.contact{background:#FFFFFF;aspect-ratio:16/9;min-height:auto;display:flex;flex-direction:column;padding:50px 0 clamp(40px,6vh,80px)}
+.contact-inner{flex:1;display:flex;flex-direction:column;width:100%}
+.contact-title{
+  font-family:var(--font-serif);font-style:normal;
+  text-align:center;color:var(--violet-light);font-weight:600;
+  /* WONK 0 — keep the elegant italic but drop the wonky swash "b" */
+  font-variation-settings:"opsz" 144,"SOFT" 0,"WONK" 0;
+  font-size:clamp(28px,4.43vw,55px);margin-bottom:16px;
+}
+/* purple divider under the heading */
+.contact-rule{border:0;height:1px;width:100%;margin:0 0 48px;background:rgba(139,92,255,.40)}
+/* tutur logo + legal, pushed to the bottom of the section */
+.contact-foot{margin-top:auto;padding-top:56px;display:flex;flex-direction:column;align-items:center;gap:0;text-align:center}
+.contact-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:32px}
+/* "Ikuti kami" + socials: own block so mobile order is Telefon→Email→Alamat→Ikuti;
+   on desktop it spans full width as a row below the three columns */
+.contact-follow{grid-column:1/-1}
+.contact-col{text-align:left}
+.contact-label{
+  font-family:var(--font-serif);font-weight:700;font-size:clamp(18px,2.73vw,33px);
+  color:var(--violet);margin-bottom:.5rem;
+}
+.contact-label.follow{margin-top:1.8rem}
+.contact-value{color:var(--violet-light);font-size:clamp(16px,2.08vw,23px);font-style:normal;line-height:1.6;display:inline-block}
+a.contact-value:hover{color:var(--violet)}
+.contact-value.address span{display:block}
+
+/* socials */
+.socials{display:flex;justify-content:flex-start;gap:.7rem;margin-top:.2rem}
+.social{
+  width:40px;height:40px;border-radius:50%;display:grid;place-items:center;
+  background:var(--white);border:1px solid var(--line);color:var(--violet);
+  transition:background .15s ease,color .15s ease,transform .15s ease;
+}
+.social:hover{background:var(--violet-bg);color:#fff;transform:translateY(-2px)}
+.socials.footer .social{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.18);color:rgba(255,255,255,.85)}
+.socials.footer .social:hover{background:var(--violet-bg);color:#fff}
+
+/* ---------- footer bits (now live inside .contact) ---------- */
+.foot-logo{height:clamp(34px,5.25vw,64px)}
+.foot-legal{color:var(--violet-light);font-size:13px;max-width:78ch;line-height:1.65}
+
+/* ---------- responsive ---------- */
+/* tablet & below: hold these small UI items at their pre-30% sizes
+   (desktop got a +30% bump; tablet/mobile stay put) */
+@media(max-width:1023px){
+  .hello{font-size:38px}
+  .pilot-inputwrap input,.pilot-inputwrap .btn{font-size:15px}
+  .foot-legal{font-size:10px}
+  /* tablet & mobile: 40px top padding for DLD + contact; 40px top/bottom for pilot */
+  .band.dld{padding-top:40px}
+  .contact{padding-top:40px}
+  .band.pilot{padding-top:40px;padding-bottom:40px}
+}
+/* mobile gutter: 20px (desktop/tablet keep the base 30px) */
+@media(max-width:767px){
+  .wrap{padding-left:20px;padding-right:20px}
+  /* phone mockup 10% smaller on mobile (256→230, 520→468); scale the "hello!"
+     offset + size to keep it sitting just above maya */
+  .phone{width:230px;height:468px}
+  .screen{padding-top:108px}
+  .hello{font-size:34px}
+  /* "1 daripada 14" smaller on mobile */
+  .stat-big{font-size:35px}
+}
+@media(max-width:900px){
+  .pilot-grid{grid-template-columns:1fr;gap:44px}
+  /* single column: let the body paragraph use the full width */
+  .pilot-body{max-width:none}
+  /* fill the column (never wider) — no `ch` unit, which renders differently on
+     real phones vs DevTools */
+  .pilot-form,.pilot-success{max-width:100%}
+}
+/* tablet only: cap the field so it doesn't stretch full-bleed (mobile fills) */
+@media(min-width:768px) and (max-width:900px){
+  .pilot-form,.pilot-success{max-width:440px}
+}
+@media(max-width:680px){
+  .band{padding:72px 0}
+  .contact-grid{grid-template-columns:1fr;gap:36px}
+  .nav-inner{padding:14px}
+}
+/* very narrow phones (<420px): stack the "Daftar Pilot" button below the email */
+@media(max-width:420px){
+  .pilot-inputwrap{flex-wrap:wrap;border-radius:20px}
+  .pilot-inputwrap .btn{width:100%}
+}
+@media(prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important}
+  html{scroll-behavior:auto}
+}
