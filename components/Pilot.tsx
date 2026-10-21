@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { useState, type FormEvent } from "react";
 import { useLang } from "@/components/LanguageProvider";
+import RichText from "@/components/RichText";
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
@@ -55,7 +56,9 @@ export default function Pilot() {
       <div className="wrap pilot-grid">
         <div className="pilot-copy">
           <h2>{t.pilot.title}</h2>
-          <p className="pilot-body">{t.pilot.body}</p>
+          <p className="pilot-body">
+            <RichText text={t.pilot.body} />
+          </p>
 
           {done ? (
             <div className="pilot-success" role="status">
@@ -89,7 +92,7 @@ export default function Pilot() {
           <div className="phone">
             <span className="notch" aria-hidden="true" />
             <div className="screen">
-              <span className="hello">{t.pilot.hello}</span>
+              <span className="hello">hello!</span>
               <div className="screen-portrait">
                 <Image
                   src="/images/maya.png"

@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import Logo from "@/components/Logo";
 import { useLang } from "@/components/LanguageProvider";
 import { contact } from "@/lib/dict";
@@ -49,6 +50,13 @@ export default function Contact() {
 
         <div className="contact-foot">
           <Logo variant="color" className="foot-logo" />
+          {/* /founding is deliberately NOT linked here — it's shared directly
+              with Founding Families. */}
+          <nav className="foot-links" aria-label="Legal">
+            <Link href="/privacy">{t.footer.privacy}</Link>
+            <span aria-hidden="true">·</span>
+            <Link href="/terms">{t.footer.terms}</Link>
+          </nav>
           <p className="foot-legal">{t.footer.legal}</p>
         </div>
       </div>

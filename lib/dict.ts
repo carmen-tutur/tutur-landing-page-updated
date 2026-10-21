@@ -43,10 +43,10 @@ export const dict = {
         "Bagaimana jika setiap detik di rumah menjadi peluang untuk membantu anak membina komunikasi?",
     },
     pilot: {
-      hello: "hello!",
-      title: "Kami sedang bina Tutur App",
+      title: "Tutur App",
+      /* Wrap a word in **double asterisks** to make it bold. */
       body:
-        "Dibina untuk membantu ibu bapa Malaysia menjadi rakan komunikasi anak. Jadilah antara keluarga terawal mencuba Tutur melalui Program Pilot kami.",
+        "Tutur ialah aplikasi bimbingan ibu bapa yang dibangunkan bersama ahli terapi pertuturan. Dalam 15 minit sehari, ibu bapa **lihat** strategi melalui video pendek, **dengar** contoh suara, dan **sebut** dengan skrip sedia guna, semasa rutin harian seperti makan dan bermain. Tutur juga merekod perkataan dan kemahiran baharu anak. Tutur bukan perkhidmatan terapi.",
       emailPh: "Email",
       submit: "Daftar Pilot",
       note: "Kami hanya akan menghubungi anda tentang Program Pilot Tutur.",
@@ -62,7 +62,13 @@ export const dict = {
       addressLabel: "Alamat",
       followLabel: "Ikuti kami",
     },
+    legalPage: {
+      langLabel: "Bahasa",
+      home: "Kembali ke laman utama",
+    },
     footer: {
+      privacy: "Notis Privasi",
+      terms: "Terma & Syarat",
       legal:
         "TUTUR TECHNOLOGIES PLT (202604000984 (LLP0046213-LGN)), diperkasakan oleh SEEd.Lab, program inkubasi perusahaan sosial yang dikuasakan oleh PETRONAS dan Tata Consultancy Services (TCS)",
     },
@@ -107,10 +113,10 @@ export const dict = {
         "What if every moment at home became a chance to help your child build communication?",
     },
     pilot: {
-      hello: "hello!",
-      title: "We're building the Tutur App",
+      title: "Tutur App",
+      /* Wrap a word in **double asterisks** to make it bold. */
       body:
-        "Built to help Malaysian parents become their child's communication partner. Be one of the first families to try Tutur through our Pilot Programme.",
+        "Tutur is a parent coaching app co-developed with speech therapists. In 15 minutes a day, parents **see** a strategy in a short video, **hear** how to say it, and **say** it with ready-to-use scripts, during everyday routines like mealtimes and play. Tutur also tracks your child's new words and skills. Tutur is not a therapy service.",
       emailPh: "Email",
       submit: "Join the Pilot",
       note: "We'll only contact you about the Tutur Pilot Programme.",
@@ -126,7 +132,13 @@ export const dict = {
       addressLabel: "Address",
       followLabel: "Follow us",
     },
+    legalPage: {
+      langLabel: "Language",
+      home: "Back to home",
+    },
     footer: {
+      privacy: "Privacy Notice",
+      terms: "Terms & Conditions",
       legal:
         "TUTUR TECHNOLOGIES PLT (202604000984 (LLP0046213-LGN)), a social enterprise incubated by SeedLab, with the support of PETRONAS and Tata Consultancy Services (TCS) @2026",
     },

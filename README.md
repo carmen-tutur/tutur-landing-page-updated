@@ -82,3 +82,24 @@ public/
 - **Colour:** Tutur Violet `#6A2FE8` primary; Lime `#AEE85A` as the encouragement/success accent; periwinkle and the signature violet gradient for surfaces. The old peach accent has been removed entirely — it had no basis in the brand.
 - **Copy:** leads with the "other **167 hours**" angle (therapy is ~1 hr/week; tutur is for the rest), BM-first touches, and the proprietary cue system (Tengok · Perhati · Dengar · Connect · Tutur).
 - **Logo:** the official woven symbol + Sifonn wordmark, used as the lockup (symbol left of wordmark) in [`Logo.tsx`](components/Logo.tsx). Source PNGs live in `/public` (trimmed to content bounds); a white wordmark variant is used on the dark footer.
+
+## Legal pages (/privacy, /terms, /founding)
+
+The copy lives in plain Markdown files, one per language:
+
+```
+content/legal/privacy.ms.md   privacy.en.md    → tutur.my/privacy
+content/legal/terms.ms.md     terms.en.md      → tutur.my/terms
+content/legal/founding.ms.md  founding.en.md   → tutur.my/founding
+```
+
+Edit those files to update the wording. The web addresses never change. Bump the `version:` line at the top when you publish a new version.
+Formatting: `## Heading`, `### Sub-heading`, `- bullet`, `1.1 clause`, `> box`, `**bold**`. Emails and `tutur.my/...` addresses become links automatically.
+
+- Each page has a BM | EN toggle (BM by default). Add `?lang=en` to a link to open it in English, e.g. `tutur.my/founding?lang=en`.
+- `/privacy` and `/terms` are linked in the footer and listed in the sitemap.
+- `/founding` is unlisted: it isn't in the footer or the sitemap, and it's marked `noindex`. Anyone with the link can still open it.
+
+## Bold words in copy
+
+In `lib/dict.ts`, wrap a word in `**double asterisks**` to make it bold (used for lihat / dengar / sebut in the Tutur App section).

@@ -449,3 +449,59 @@ a.contact-value:hover{color:var(--violet)}
   *{animation:none!important;transition:none!important}
   html{scroll-behavior:auto}
 }
+
+/* ---------- pilot body: bold verbs (lihat / dengar / sebut) ---------- */
+.pilot-body strong{font-weight:700;color:#fff}
+
+/* ---------- footer legal links ---------- */
+.foot-links{display:flex;align-items:center;justify-content:center;gap:.6rem;margin:14px 0 10px;font-size:13px;font-weight:600}
+.foot-links a{color:var(--violet);text-decoration:underline;text-underline-offset:3px}
+.foot-links a:hover{color:var(--violet-deep)}
+.foot-links span{color:var(--violet-light)}
+@media(max-width:1023px){.foot-links{font-size:12px}}
+
+/* ---------- legal pages (/privacy, /terms, /founding) ---------- */
+.legal-hero{background:var(--violet-bg);color:#fff;padding:20px 0 clamp(40px,6vw,72px)}
+.legal-hero .wrap,.legal-main{padding-left:clamp(20px,7.8vw,113px);padding-right:clamp(20px,7.8vw,113px)}
+.legal-bar{display:flex;align-items:center;justify-content:space-between;gap:16px}
+.legal-bar .logo{margin-left:-24px}
+.legal-logo{height:70px;width:auto}
+@media(max-width:1023px){.legal-logo{height:55px}.legal-bar .logo{margin-left:-19px}}
+.legal-head{margin-top:clamp(20px,4vw,48px)}
+.legal-eyebrow{font-weight:600;font-size:clamp(14px,1.4vw,17px);color:rgba(255,255,255,.8);letter-spacing:.02em}
+.legal-head h1{
+  font-family:var(--font-serif);font-weight:600;letter-spacing:0;line-height:1.1;
+  font-variation-settings:"opsz" 144,"SOFT" 0,"WONK" 1;
+  font-size:clamp(32px,4.43vw,55px);margin:.3rem 0 .6rem;
+}
+.legal-version{font-size:clamp(14px,1.4vw,16px);color:rgba(255,255,255,.85)}
+.legal-main{padding-top:clamp(28px,4vw,56px);padding-bottom:clamp(48px,6vw,88px)}
+.legal-body{
+  max-width:760px;margin:0 auto;background:var(--white);border-radius:var(--r);
+  box-shadow:var(--shadow-sm);padding:clamp(24px,4.5vw,56px);
+  color:var(--slate);font-size:16px;line-height:1.7;
+}
+.legal-body > *:first-child{margin-top:0}
+.legal-body p{margin:0 0 1rem}
+.legal-body h2{
+  font-family:var(--font-serif);font-weight:600;letter-spacing:0;color:var(--violet);
+  font-size:clamp(20px,2.2vw,26px);line-height:1.25;margin:2.4rem 0 .8rem;scroll-margin-top:24px;
+}
+.legal-body h3{font-family:var(--font-head);font-weight:700;color:var(--violet-ink);font-size:16px;letter-spacing:0;margin:1.4rem 0 .5rem}
+.legal-body ul{margin:0 0 1rem;padding-left:1.25rem}
+.legal-body li{margin:.35rem 0}
+.legal-body li::marker{color:var(--violet)}
+.legal-body strong{color:var(--violet-ink);font-weight:700}
+.legal-body a{color:var(--violet);text-decoration:underline;text-underline-offset:2px;word-break:break-word}
+.legal-clause{display:grid;grid-template-columns:3.2rem 1fr;gap:.25rem;margin:0 0 .9rem}
+.legal-clause p{margin:0}
+.legal-num{font-weight:700;color:var(--violet);font-variant-numeric:tabular-nums}
+.legal-callout{background:var(--violet-wash);border-radius:16px;padding:20px 24px;margin:0 0 1.6rem}
+.legal-callout h3{margin-top:0;color:var(--violet)}
+.legal-callout ul{margin-bottom:0}
+@media(max-width:480px){
+  .legal-body{font-size:15px;border-radius:16px}
+  .legal-clause{grid-template-columns:2.6rem 1fr}
+  .legal-callout{padding:16px 18px}
+}
+[hidden]{display:none!important}
