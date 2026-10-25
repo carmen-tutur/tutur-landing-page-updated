@@ -9,7 +9,7 @@ version: Version 1.0 · Effective 26 October 2026
 > - Tutur is a parent education app. It gives parents and caregivers the know-how and everyday activities to support their child's speech and language at home.
 > - Tutur is not therapy. It does not screen, diagnose or treat, and it does not replace a qualified speech-language therapist.
 > - You must be 18 or over and the child's parent or legal guardian.
-> - 7 days free, then RM9 for your first month and RM19 a month after that. Cancel anytime in Settings.
+> - 7 days free, then RM19 a month after that. Cancel anytime in Settings.
 > - Your child's information belongs to you. We use it only to run Tutur, as our Privacy Notice explains.
 > - No ads, no chat with other users, and all payments are made by you.
 > - Questions or complaints: hello@tutur.my.
@@ -42,7 +42,7 @@ version: Version 1.0 · Effective 26 October 2026
 
 4.1 New accounts get a 7-day free trial. No payment details are needed to start.
 
-4.2 After the trial, Tutur costs RM9 for the first month (once per family), then RM19 a month. Prices are in Ringgit Malaysia and include any applicable tax.
+4.2 After the trial, Tutur costs RM19 a month. Prices are in Ringgit Malaysia and include any applicable tax.
 
 4.3 Card payments renew each month until you cancel. FPX and e-wallet payments do not renew automatically.
 

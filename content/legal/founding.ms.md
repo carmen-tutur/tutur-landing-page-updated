@@ -10,7 +10,7 @@ F1. **Siapa.** Pendaftaran dibuka pada 16 Oktober 2026 dan aplikasi dilancarkan 
 
 F2. **Percuma sehingga 31 Disember 2026.** Keluarga Pengasas menggunakan Tutur secara percuma dari hari akaun mereka diwujudkan sehingga 31 Disember 2026. Tiada butiran pembayaran diperlukan dalam tempoh ini.
 
-F3. **Harga Pengasas mulai 1 Januari 2027.** Anda kemudian boleh meneruskan pada harga RM19 sebulan. Harga ini dikunci selagi langganan anda aktif. Ia termasuk modul baharu (seperti Modul 2) dan ciri yang ditambah kepada aplikasi Tutur standard, walaupun harga standard naik. Tawaran RM9 untuk bulan pertama bagi pengguna baharu tidak terpakai kepada Keluarga Pengasas.
+F3. **Harga Pengasas mulai 1 Januari 2027.** Anda kemudian boleh meneruskan pada harga RM19 sebulan. Harga ini dikunci selagi langganan anda aktif. Ia termasuk modul baharu (seperti Modul 2) dan ciri yang ditambah kepada aplikasi Tutur standard, walaupun harga standard naik.
 
 F4. **Tiada caj automatik.** Kami akan mengingatkan anda sebelum tempoh percuma tamat. Anda hanya dikenakan bayaran jika anda memilih untuk meneruskan. Jika tidak, akses anda akan dijeda, dan anda boleh menyertai semula kemudian pada harga standard.
 

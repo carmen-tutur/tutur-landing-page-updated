@@ -10,7 +10,7 @@ F1. **Who.** Registration opened on 16 October 2026 and the app launches on 26 O
 
 F2. **Free until 31 December 2026.** Founding Families use Tutur free from the day their account is set up until 31 December 2026. No payment details are needed during this time.
 
-F3. **Founding price from 1 January 2027.** You can then continue for RM19 a month. This price is locked for as long as your subscription stays active. It includes new modules (such as Module 2) and features added to the standard Tutur app, even if the standard price goes up. The RM9 first-month offer for new users does not apply to Founding Families.
+F3. **Founding price from 1 January 2027.** You can then continue for RM19 a month. This price is locked for as long as your subscription stays active. It includes new modules (such as Module 2) and features added to the standard Tutur app, even if the standard price goes up.
 
 F4. **Nothing is charged automatically.** We will remind you before your free period ends. You are charged only if you choose to continue. If you don't, your access pauses, and you can rejoin later at the standard price.
 

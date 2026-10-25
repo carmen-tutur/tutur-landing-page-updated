@@ -9,7 +9,7 @@ version: Versi 1.0 · Berkuat kuasa 26 Oktober 2026
 > - Tutur ialah aplikasi pendidikan untuk ibu bapa. Aplikasi ini membekalkan ibu bapa dan penjaga dengan pengetahuan serta aktiviti harian bagi menyokong perkembangan pertuturan dan bahasa anak di rumah.
 > - Tutur bukan perkhidmatan terapi. Aplikasi ini tidak melakukan saringan, diagnosis atau rawatan, dan tidak menggantikan ahli terapi pertuturan-bahasa yang bertauliah.
 > - Anda mestilah berumur 18 tahun dan ke atas serta merupakan ibu bapa atau penjaga sah kepada kanak-kanak tersebut.
-> - Percubaan percuma selama 7 hari, diikuti RM9 bagi bulan pertama dan RM19 sebulan bagi bulan-bulan berikutnya. Langganan boleh dibatalkan pada bila-bila masa melalui Tetapan.
+> - Percubaan percuma selama 7 hari, diikuti RM19 sebulan bagi bulan-bulan berikutnya. Langganan boleh dibatalkan pada bila-bila masa melalui Tetapan.
 > - Maklumat anak anda adalah hak milik anda. Kami menggunakannya semata-mata untuk mengendalikan Tutur, sebagaimana yang diterangkan dalam Notis Privasi kami.
 > - Tiada iklan dan tiada fungsi sembang dengan pengguna lain. Semua pembayaran dibuat oleh anda sendiri.
 > - Pertanyaan atau aduan: hello@tutur.my.
@@ -42,7 +42,7 @@ version: Versi 1.0 · Berkuat kuasa 26 Oktober 2026
 
 4.1 Akaun baharu mendapat percubaan percuma selama 7 hari. Tiada butiran pembayaran diperlukan untuk bermula.
 
-4.2 Selepas percubaan, Tutur berharga RM9 bagi bulan pertama (sekali bagi setiap keluarga), kemudian RM19 sebulan. Harga dinyatakan dalam Ringgit Malaysia dan termasuk sebarang cukai yang terpakai.
+4.2 Selepas percubaan, Tutur berharga RM19 sebulan. Harga dinyatakan dalam Ringgit Malaysia dan termasuk sebarang cukai yang terpakai.
 
 4.3 Pembayaran melalui kad diperbaharui setiap bulan sehingga anda membatalkannya. Pembayaran melalui FPX dan e-dompet tidak diperbaharui secara automatik.
 
