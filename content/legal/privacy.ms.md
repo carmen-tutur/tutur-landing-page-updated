@@ -73,8 +73,6 @@ Anda boleh, bagi diri anda dan anak anda:
 - meminta salinan data yang kami simpan;
 - meminta kami membetulkannya;
 - menarik balik persetujuan, atau meminta kami menghentikan atau mengehadkan pemprosesan;
-- meminta kami memindahkan data anda kepada perkhidmatan lain, jika boleh dilaksanakan secara teknikal;
-- meminta kami memadam akaun anda dan data anak anda.
 
 E-mel hello@tutur.my. Kami akan membalas dalam tempoh 21 hari. Fi mungkin dikenakan bagi permintaan akses sebagaimana dibenarkan oleh PDPA.
 
