@@ -6,13 +6,11 @@ version: Version 1.0 · Effective 26 October 2026
 
 > ### The short version
 >
-> - Tutur is a parent education app. It gives parents and caregivers the know-how and everyday activities to support their child's speech and language at home.
-> - Tutur is not therapy. It does not screen, diagnose or treat, and it does not replace a qualified speech-language therapist.
-> - You must be 18 or over and the child's parent or legal guardian.
-> - 7 days free, then RM19 a month after that. Cancel anytime in Settings.
-> - Your child's information belongs to you. We use it only to run Tutur, as our Privacy Notice explains.
-> - No ads, no chat with other users, and all payments are made by you.
-> - Questions or complaints: hello@tutur.my.
+- Tutur is a parent education app. It gives parents and caregivers the know-how and everyday activities to support their child's speech and language at home.
+- Tutur is not therapy. It does not screen, diagnose or treat, and it does not replace a qualified speech-language therapist.
+- You must be 18 or over and the child's parent or legal guardian.
+- 7 days free, then RM19 a month after that. Cancel anytime in Settings.
+- Questions or complaints: hello@tutur.my.
 
 ## 1. About Tutur and these terms
 

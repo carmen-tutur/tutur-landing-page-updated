@@ -73,8 +73,6 @@ You can, for yourself and your child:
 - ask for a copy of the data we hold;
 - ask us to correct it;
 - withdraw consent, or ask us to stop or limit processing;
-- ask us to transfer your data to another service, where technically feasible;
-- ask us to delete your account and your child's data.
 
 Email hello@tutur.my. We will reply within 21 days. A fee may apply to access requests where the PDPA allows it.
 
